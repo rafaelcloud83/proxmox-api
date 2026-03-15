@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.rafaelciriaco</groupId>
 	<artifactId>proxmox-api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>proxmox-api</name>
 	<description>API Rest para consumo de informações do Proxmox</description>
 	<url/>
