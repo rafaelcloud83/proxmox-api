@@ -1,5 +1,6 @@
 package br.com.rafaelciriaco.proxmox_api.controller;
 
+import br.com.rafaelciriaco.proxmox_api.model.Vm;
 import br.com.rafaelciriaco.proxmox_api.model.Proxmox;
 import br.com.rafaelciriaco.proxmox_api.service.ProxmoxService;
 import org.springframework.http.ResponseEntity;
@@ -20,9 +21,14 @@ public class ProxmoxController {
     }
 
     @GetMapping("/vms")
-    public ResponseEntity<Proxmox> getStatus() {
+    public ResponseEntity<Vm> getVms() {
+        Vm vm = this.proxmoxService.getVms();
+        return ResponseEntity.ok(vm);
+    }
+
+    @GetMapping()
+    public ResponseEntity<Proxmox> getProxmoxStatus() {
         Proxmox proxmox = this.proxmoxService.getStatus();
         return ResponseEntity.ok(proxmox);
     }
-
 }
